@@ -1,0 +1,22 @@
+title: James Steiner
+tagline: Robotics & Vision-Language-Action models
+description: Projects and writeups in robot learning and Vision-Language-Action models.
+url: https://jamessteiner.github.io
+github_user: JamesSteiner
+# cv_url: /assets/cv.pdf      # uncomment once you add a CV
+email: ""                      # optional: shows an Email link if set
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+markdown: kramdown
+kramdown:
+  input: GFM                   # GitHub-flavored markdown (tables, fenced code)
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

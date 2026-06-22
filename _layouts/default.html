@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.summary | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- kramdown renders $$...$$ as \[ \] delimiters; MathJax 2.7 (TeX-AMS_CHTML bundles tex2jax) typesets them. -->
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Projects</a>
+        <a href="https://github.com/{{ site.github_user }}">GitHub</a>
+        {% if site.cv_url %}<a href="{{ site.cv_url | relative_url }}">CV</a>{% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© {{ 'now' | date: "%Y" }} {{ site.title }} ·
+      <a href="https://github.com/{{ site.github_user }}">GitHub</a></div>
+  </footer>
+</body>
+</html>
