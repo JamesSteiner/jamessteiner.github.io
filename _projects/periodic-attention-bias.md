@@ -4,7 +4,7 @@ title: "Can a Transformer Learn Position in a Few Thousand Parameters?"
 summary: "Replacing nanoGPT's 131,072 position-embedding parameters with a 3,456-parameter periodic attention bias on enwik8, a 38× reduction with no measurable loss in performance."
 thumbnail: /assets/img/pd_curves.png
 repo: https://github.com/JamesSteiner/nanoGPT
-date: 2026-06-20
+date: 2026-06-01
 ---
 
 Transformers don't natively know the order of their inputs. Self-attention treats a
