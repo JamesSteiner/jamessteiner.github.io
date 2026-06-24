@@ -3,7 +3,7 @@ layout: project
 title: "Can a Transformer Learn Position in a Few Thousand Parameters?"
 summary: "Replacing nanoGPT's 131,072 position-embedding parameters with a 3,456-parameter periodic attention bias on enwik8, a 38× reduction with no measurable loss in performance."
 thumbnail: /assets/img/pd_curves.png
-repo: https://github.com/JamesSteiner/nanoGPT
+repo: https://github.com/JamesSteiner/periodic-attention-bias
 date: 2026-06-01
 ---
 
@@ -258,7 +258,7 @@ still ahead. What I find most interesting is that, handed a Fourier basis and no
 instructions, the model reached for the same recency prior the field eventually
 hard-coded as ALiBi, then built structure on top of it as a sort of validation for the hard-coded recency prior.
 
-**Code:** https://github.com/JamesSteiner/nanoGPT a fork of
+**Code:** https://github.com/JamesSteiner/periodic-attention-bias a fork of
 [Andrej Karpathy's nanoGPT](https://github.com/karpathy/nanoGPT). All of my changes
 are a small diff on top: the `PeriodicBias` module in `new_model.py` /
 `new_model_no_pe.py`, plus configs and training logs.
